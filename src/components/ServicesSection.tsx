@@ -5,39 +5,43 @@ const ServicesSection = () => {
   const services = [
     {
       title: "Custom Tattoos",
-      description: "Unique, personalized tattoo designs created just for you",
-      price: "From ₦15,000",
-      features: ["Custom Design", "Multiple Sessions", "Touch-ups Included", "Aftercare Guide"]
+      description: "We design and create unique tattoos tailored to your personality, story, or artistic vision. From small minimal pieces to full sleeves, we bring your ideas to life with precision and creativity.",
+      features: ["Personalized Design Process", "Unlimited Revisions", "Artist Collaboration", "Lifetime Touch-up Policy"]
     },
     {
-      title: "Traditional Tattoos",
-      description: "Classic tattoo styles with modern execution",
-      price: "From ₦8,000",
-      features: ["Flash Designs", "Same Day Service", "Classic Styles", "Quick Healing"]
+      title: "Black & Grey Realism",
+      description: "Detailed, shaded designs that give a lifelike, dramatic effect. Perfect for portraits, animals, or spiritual themes with stunning depth and dimension.",
+      features: ["Photorealistic Results", "Advanced Shading Techniques", "Portrait Specialization", "Fine Detail Work"]
     },
     {
-      title: "Body Piercing",
-      description: "Professional piercing services with premium jewelry",
-      price: "From ₦5,000",
-      features: ["Sterile Process", "Premium Jewelry", "Aftercare Kit", "Quick Service"]
+      title: "Color Tattoos",
+      description: "Bright, vivid tattoos that pop with personality. From watercolor effects to bold traditional colors, we make your artwork stand out beautifully.",
+      features: ["Premium Ink Quality", "Vibrant Color Matching", "Watercolor Effects", "Long-lasting Brilliance"]
     },
     {
-      title: "Tattoo Cover-ups",
-      description: "Transform old tattoos into stunning new artwork",
-      price: "From ₦20,000",
-      features: ["Design Consultation", "Color Matching", "Multiple Options", "Guaranteed Results"]
+      title: "Minimalist & Line Art",
+      description: "Simple, elegant tattoos with clean lines and subtle designs. Ideal for first-time tattoos or those who prefer a sleek, sophisticated style.",
+      features: ["Clean Line Work", "Geometric Precision", "Delicate Details", "Timeless Elegance"]
     },
     {
-      title: "Consultation",
-      description: "Professional advice on design, placement, and pricing",
-      price: "Free",
-      features: ["Design Discussion", "Placement Advice", "Price Estimate", "Booking Assistance"]
+      title: "Tribal & Traditional",
+      description: "Bold, timeless patterns inspired by cultural art forms. These tattoos make a strong statement and carry deep meaning with authentic styling.",
+      features: ["Cultural Authenticity", "Bold Line Work", "Traditional Techniques", "Meaningful Symbolism"]
     },
     {
-      title: "Aftercare Services",
-      description: "Complete aftercare support for optimal healing",
-      price: "From ₦2,000",
-      features: ["Healing Products", "Follow-up Check", "24/7 Support", "Healing Guarantee"]
+      title: "Piercing Services", 
+      description: "Professional body piercing in a safe, hygienic environment. We offer ear, nose, and other piercing options with proper aftercare guidance.",
+      features: ["Medical-Grade Sterilization", "Premium Jewelry Selection", "Expert Placement", "Comprehensive Aftercare"]
+    },
+    {
+      title: "Tattoo Cover-Ups & Redesigns",
+      description: "Transform old or unwanted tattoos into new works of art. Our artists specialize in creative solutions that give your skin a fresh start.",
+      features: ["Creative Problem Solving", "Color Correction Mastery", "Design Innovation", "Complete Transformation"]
+    },
+    {
+      title: "Consultations",
+      description: "Not sure what design to choose? We provide one-on-one consultations to help you explore styles, placements, and custom designs before booking your session.",
+      features: ["Expert Style Guidance", "Placement Optimization", "Design Exploration", "Personalized Recommendations"]
     }
   ];
 
@@ -57,7 +61,6 @@ const ServicesSection = () => {
               <CardHeader>
                 <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
                 <CardDescription className="text-muted-foreground">{service.description}</CardDescription>
-                <div className="text-2xl font-bold text-primary mt-2">{service.price}</div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 mb-6">
