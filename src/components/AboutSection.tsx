@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import artistPortrait from "@/assets/artist-portrait.jpg";
+import studioInterior from "@/assets/studio-interior.jpg";
 
 const AboutSection = () => {
   const features = [
@@ -79,6 +80,59 @@ const AboutSection = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Our Studio */}
+        <div className="mt-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-4">Our Premium Studio</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Step into our world-class facility where artistry meets the highest standards of cleanliness and comfort
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative overflow-hidden rounded-lg ink-border">
+              <img 
+                src={studioInterior} 
+                alt="Tattoo Lagos premium studio interior with modern equipment and clean workspace" 
+                className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+            </div>
+            
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🏥</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Medical-Grade Environment</h4>
+                  <p className="text-muted-foreground">Our studio maintains hospital-level cleanliness with advanced air filtration and sterilization systems.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">State-of-the-Art Equipment</h4>
+                  <p className="text-muted-foreground">Professional-grade tattoo machines and piercing tools from industry-leading manufacturers.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                  <span className="text-2xl">🛋️</span>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Comfort First</h4>
+                  <p className="text-muted-foreground">Ergonomic chairs, soothing ambiance, and a relaxing atmosphere for your complete comfort.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Certifications & Standards */}
