@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import portfolioImage from "@/assets/portfolio-1.jpg";
+import tattooRealism from "@/assets/tattoo-realism.jpg";
+import tattooWatercolor from "@/assets/tattoo-watercolor.jpg";
+import tattooMinimalist from "@/assets/tattoo-minimalist.jpg";
+import tattooTribal from "@/assets/tattoo-tribal.jpg";
+import tattooPortrait from "@/assets/tattoo-portrait.jpg";
+import piercingEar from "@/assets/piercing-ear.jpg";
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -14,14 +19,94 @@ const PortfolioSection = () => {
     { id: "blackwork", label: "Blackwork" }
   ];
 
-  // Mock portfolio items - in real app, these would come from a database
-  const portfolioItems = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    category: categories[Math.floor(Math.random() * (categories.length - 1)) + 1].id,
-    image: portfolioImage,
-    title: `Artwork ${i + 1}`,
-    description: "Premium tattoo artwork"
-  }));
+  // Portfolio items with diverse tattoo and piercing artworks
+  const portfolioItems = [
+    {
+      id: 1,
+      category: "realistic",
+      image: tattooRealism,
+      title: "Black & Grey Realism",
+      description: "Photorealistic lion portrait"
+    },
+    {
+      id: 2,
+      category: "traditional",
+      image: tattooWatercolor,
+      title: "Watercolor Art",
+      description: "Vibrant floral design"
+    },
+    {
+      id: 3,
+      category: "geometric",
+      image: tattooMinimalist,
+      title: "Minimalist Line Art",
+      description: "Clean geometric mountains"
+    },
+    {
+      id: 4,
+      category: "traditional",
+      image: tattooTribal,
+      title: "Tribal Design",
+      description: "Bold Polynesian patterns"
+    },
+    {
+      id: 5,
+      category: "realistic",
+      image: tattooPortrait,
+      title: "Portrait Realism",
+      description: "Detailed facial portrait"
+    },
+    {
+      id: 6,
+      category: "blackwork",
+      image: piercingEar,
+      title: "Professional Piercing",
+      description: "Multiple ear piercings"
+    },
+    // Duplicate some items to fill the grid
+    {
+      id: 7,
+      category: "blackwork",
+      image: tattooRealism,
+      title: "Realism Detail",
+      description: "Fine line craftsmanship"
+    },
+    {
+      id: 8,
+      category: "geometric",
+      image: tattooMinimalist,
+      title: "Clean Lines",
+      description: "Precision geometric work"
+    },
+    {
+      id: 9,
+      category: "traditional",
+      image: tattooTribal,
+      title: "Traditional Bold",
+      description: "Cultural tribal art"
+    },
+    {
+      id: 10,
+      category: "realistic",
+      image: tattooPortrait,
+      title: "Portrait Mastery",
+      description: "Lifelike facial features"
+    },
+    {
+      id: 11,
+      category: "traditional",
+      image: tattooWatercolor,
+      title: "Color Splash",
+      description: "Artistic watercolor style"
+    },
+    {
+      id: 12,
+      category: "blackwork",
+      image: piercingEar,
+      title: "Piercing Expertise",
+      description: "Safe, professional service"
+    }
+  ];
 
   const filteredItems = activeCategory === "all" 
     ? portfolioItems 
