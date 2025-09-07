@@ -1,42 +1,52 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Portfolio" },
-    { href: "#reviews", label: "Reviews" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/reviews", label: "Reviews" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/aftercare", label: "Aftercare" },
+    { href: "/contact", label: "Contact" },
   ];
+
+  const isActive = (href: string) => location.pathname === href;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Tattoo Lagos
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                to={item.href}
+                className={`transition-colors duration-200 ${
+                  isActive(item.href)
+                    ? "text-primary font-semibold"
+                    : "text-foreground hover:text-primary"
+                }`}
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <Button className="cta-gradient ml-4">
-              Book Now
+            <Button asChild className="cta-gradient ml-4">
+              <Link to="/contact">Book Now</Link>
             </Button>
           </div>
 
@@ -58,18 +68,22 @@ const Navigation = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-card border border-border rounded-lg mt-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
-                  className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
+                  to={item.href}
+                  className={`block px-3 py-2 transition-colors duration-200 ${
+                    isActive(item.href)
+                      ? "text-primary font-semibold"
+                      : "text-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="cta-gradient w-full">
-                  Book Now
+                <Button asChild className="cta-gradient w-full">
+                  <Link to="/contact">Book Now</Link>
                 </Button>
               </div>
             </div>
