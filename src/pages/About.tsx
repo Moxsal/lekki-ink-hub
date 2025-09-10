@@ -190,8 +190,8 @@ const About = () => {
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
               <div className="space-y-2 text-muted-foreground text-sm">
                 <p>Lekki Phase 1, Lagos</p>
-                <p>+234 (0) 123 456 7890</p>
-                <p>hello@tattoolagos.com</p>
+                <p>+2348138068093</p>
+                <p>Tattoolagos1@gmail.com</p>
                 <p>Mon-Sat: 9AM-9PM</p>
               </div>
             </div>

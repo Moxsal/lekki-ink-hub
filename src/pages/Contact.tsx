@@ -19,23 +19,23 @@ const Contact = () => {
     {
       icon: "📞",
       title: "Call Us",
-      details: ["+234 (0) 123 456 7890"],
+      details: ["+2348138068093"],
       action: "Call Now",
-      href: "tel:+2341234567890"
+      href: "tel:+2348138068093"
     },
     {
       icon: "💬",
       title: "WhatsApp",
-      details: ["+234 (0) 123 456 7890"],
+      details: ["+2348138068093"],
       action: "Chat on WhatsApp",
-      href: "https://wa.me/2341234567890"
+      href: "https://wa.me/2348138068093"
     },
     {
       icon: "📧",
       title: "Email Us",
-      details: ["hello@tattoolagos.com"],
+      details: ["Tattoolagos1@gmail.com"],
       action: "Send Email",
-      href: "mailto:hello@tattoolagos.com"
+      href: "mailto:Tattoolagos1@gmail.com"
     }
   ];
 
@@ -177,12 +177,12 @@ const Contact = () => {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <Button asChild size="lg" className="w-full cta-gradient">
-                      <a href="https://wa.me/2341234567890" target="_blank" rel="noopener noreferrer">
+                      <a href="https://wa.me/2348138068093" target="_blank" rel="noopener noreferrer">
                         💬 WhatsApp Us Now
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="lg" className="w-full">
-                      <a href="tel:+2341234567890">
+                      <a href="tel:+2348138068093">
                         📞 Call Studio
                       </a>
                     </Button>
@@ -254,8 +254,8 @@ const Contact = () => {
               <h4 className="font-semibold text-foreground mb-4">Contact</h4>
               <div className="space-y-2 text-muted-foreground text-sm">
                 <p>Lekki Phase 1, Lagos</p>
-                <p>+234 (0) 123 456 7890</p>
-                <p>hello@tattoolagos.com</p>
+                <p>+2348138068093</p>
+                <p>Tattoolagos1@gmail.com</p>
                 <p>Mon-Sat: 9AM-9PM</p>
               </div>
             </div>

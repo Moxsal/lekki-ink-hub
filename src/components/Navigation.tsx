@@ -32,6 +32,25 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Contact Links */}
+            <div className="flex items-center space-x-4 text-sm">
+              <a 
+                href="tel:+2348138068093" 
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1"
+              >
+                <span>📞</span>
+                <span>+2348138068093</span>
+              </a>
+              <a 
+                href="mailto:Tattoolagos1@gmail.com" 
+                className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1"
+              >
+                <span>📧</span>
+                <span className="hidden lg:inline">Tattoolagos1@gmail.com</span>
+              </a>
+            </div>
+            
+            {/* Navigation Links */}
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -67,6 +86,26 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-card border border-border rounded-lg mt-2">
+              {/* Mobile Contact Links */}
+              <div className="px-3 py-2 border-b border-border mb-2">
+                <div className="flex flex-col space-y-2 text-sm">
+                  <a 
+                    href="tel:+2348138068093" 
+                    className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2"
+                  >
+                    <span>📞</span>
+                    <span>+2348138068093</span>
+                  </a>
+                  <a 
+                    href="mailto:Tattoolagos1@gmail.com" 
+                    className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-2"
+                  >
+                    <span>📧</span>
+                    <span>Tattoolagos1@gmail.com</span>
+                  </a>
+                </div>
+              </div>
+              
               {navItems.map((item) => (
                 <Link
                   key={item.href}

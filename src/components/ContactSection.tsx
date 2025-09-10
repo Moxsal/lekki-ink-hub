@@ -14,13 +14,13 @@ const ContactSection = () => {
     {
       icon: "📱",
       title: "Call or WhatsApp",
-      details: ["+234 (0) 123 456 7890", "Available 9AM - 9PM"],
+      details: ["+2348138068093", "Available 9AM - 9PM"],
       action: "Call Now"
     },
     {
       icon: "📧",
       title: "Email Us",
-      details: ["hello@tattoolagos.com", "Response within 24 hours"],
+      details: ["Tattoolagos1@gmail.com", "Response within 24 hours"],
       action: "Send Email"
     },
     {
